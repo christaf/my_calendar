@@ -1,19 +1,22 @@
 import React from 'react';
-import './App.css';
-import { AuthProvider } from './contexts/AuthContext';
+import './assets/styles/App.css';
+import {AuthProvider} from './contexts/AuthContext';
 import Login from './components/Auth/Login';
 import Register from './components/Auth/Register';
 
 function App() {
-  return (
-      <AuthProvider>
+    console.log(Login)
+    return (
         <div className="App">
-          <h1>Social App</h1>
-          <Login />
-          <Register />
+            <h1>Social App</h1>
+
+            <AuthProvider>
+                <Login/>
+                <Register/>
+            </AuthProvider>
         </div>
-      </AuthProvider>
-  );
+
+    );
 }
 
 export default App;
